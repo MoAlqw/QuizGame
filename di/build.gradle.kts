@@ -4,6 +4,9 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
 }
+hilt {
+    enableAggregatingTask = false
+}
 
 android {
     namespace = "com.example.di"
