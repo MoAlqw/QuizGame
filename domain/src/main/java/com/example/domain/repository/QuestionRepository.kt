@@ -4,4 +4,5 @@ import com.example.core.model.Question
 
 interface QuestionRepository {
     suspend fun getQuestionsForTopic(topicId: Int): List<Question>
+    suspend fun getQuestionsCountForTopic(topicId: Int): Int
 }
