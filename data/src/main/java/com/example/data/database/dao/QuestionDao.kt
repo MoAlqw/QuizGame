@@ -11,6 +11,9 @@ interface QuestionDao {
     @Query("SELECT * FROM questions WHERE topicId = :topicId")
     suspend fun getQuestionsForTopic(topicId: Int): List<QuestionEntity>
 
+    @Query("SELECT COUNT(*) FROM questions WHERE topicId = :topicId")
+    suspend fun getQuestionsCountForTopic(topicId: Int): Int
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(questions: List<QuestionEntity>)
 }

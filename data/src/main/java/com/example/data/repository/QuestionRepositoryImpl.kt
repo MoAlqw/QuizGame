@@ -17,4 +17,8 @@ class QuestionRepositoryImpl(private val questionDao: QuestionDao): QuestionRepo
             )
         }
     }
+
+    override suspend fun getQuestionsCountForTopic(topicId: Int): Int {
+        return questionDao.getQuestionsCountForTopic(topicId)
+    }
 }
