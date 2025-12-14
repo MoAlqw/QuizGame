@@ -5,11 +5,12 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.data.database.entity.TopicEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TopicDao {
     @Query("SELECT * FROM topics")
-    suspend fun getTopics(): List<TopicEntity>
+    fun getTopics(): Flow<List<TopicEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(topics: List<TopicEntity>)

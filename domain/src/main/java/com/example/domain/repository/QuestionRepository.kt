@@ -1,8 +1,9 @@
 package com.example.domain.repository
 
 import com.example.core.model.Question
+import kotlinx.coroutines.flow.Flow
 
 interface QuestionRepository {
-    suspend fun getQuestionsForTopic(topicId: Int): List<Question>
-    suspend fun getQuestionsCountForTopic(topicId: Int): Int
+    fun getQuestionsForTopic(topicId: Int): Flow<List<Question>>
+    fun getQuestionsCountForTopic(topicId: Int): Flow<Int>
 }

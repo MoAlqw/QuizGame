@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Тренажёр по компьютерным сетям</string>
+    <string name="main_phrase">Проверьте свои знания с помощью викторин!</string>
+    <string name="background_image">Background image</string>
+    <string name="description_of_app">Если вы просто ищете увлекательный способ узнать новые факты, наши викторины созданы для того, чтобы развлекать и обучать.</string>
+    <string name="image_of_topic">Image of topic</string>
+    <string name="_30_30">30/30</string>
+    <string name="_15_questions">15 вопросов</string>
+    <string name="next">Далее</string>
+    <string name="congratulations">Поздравляем\nхорошая работа!</string>
+    <string name="back_to_home">На главную страницу</string>
 </resources>

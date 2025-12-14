@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.fragment.TopicsFragment"
+    android:padding="15dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_of_app"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="16dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/background_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/main_container" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#9E0F469A" />
+
+            <TextView
+                android:id="@+id/text_view_main_phrase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/main_phrase"
+                android:textSize="16sp"
+                android:textColor="#D6E6FF"
+                android:textStyle="bold"
+                android:fontFamily="@font/playfair_display_semi_bold"
+                android:paddingStart="30dp"
+                android:paddingTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/text_view_description_of_application"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/description_of_app"
+                android:textSize="11sp"
+                android:textColor="#D6E6FF"
+                android:fontFamily="@font/playfair_display_semi_bold"
+                android:textStyle=""
+                android:paddingStart="30dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_main_phrase"
+                app:layout_constraintWidth_percent="0.7"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_topics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_of_app"
+        tools:listitem="@layout/topic_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

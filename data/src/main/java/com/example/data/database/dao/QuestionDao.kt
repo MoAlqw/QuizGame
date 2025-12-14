@@ -5,14 +5,15 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.data.database.entity.QuestionEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface QuestionDao {
     @Query("SELECT * FROM questions WHERE topicId = :topicId")
-    suspend fun getQuestionsForTopic(topicId: Int): List<QuestionEntity>
+    fun getQuestionsForTopic(topicId: Int): Flow<List<QuestionEntity>>
 
     @Query("SELECT COUNT(*) FROM questions WHERE topicId = :topicId")
-    suspend fun getQuestionsCountForTopic(topicId: Int): Int
+    fun getQuestionsCountForTopic(topicId: Int): Flow<Int>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(questions: List<QuestionEntity>)

@@ -2,12 +2,12 @@ package com.example.domain.usecase.topic
 
 import com.example.core.model.Topic
 import com.example.domain.repository.TopicRepository
-import javax.inject.Inject
+import kotlinx.coroutines.flow.Flow
 
-class GetTopicsUseCase @Inject constructor(
+class GetTopicsUseCase(
     private val topicRepository: TopicRepository
 ) {
-    suspend operator fun invoke(): List<Topic> {
+    operator fun invoke(): Flow<List<Topic>> {
         return topicRepository.getTopics()
     }
 }

@@ -5,11 +5,11 @@ import com.example.data.repository.TopicRepositoryImpl
 import com.example.domain.repository.QuestionRepository
 import com.example.domain.repository.TopicRepository
 import dagger.Binds
+import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
-@Singleton
+@Module
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
 

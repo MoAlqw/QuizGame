@@ -41,6 +41,9 @@ dependencies {
     ksp(libs.room.compiler)
     // Json
     implementation(libs.gson)
+    // Hilt
+    implementation(libs.hilt)
+    ksp(libs.hilt.compiler)
 
     implementation(project(":domain"))
     implementation(project(":core"))

@@ -1,12 +1,12 @@
 package com.example.domain.usecase.question
 
 import com.example.domain.repository.QuestionRepository
-import javax.inject.Inject
+import kotlinx.coroutines.flow.Flow
 
-class GetQuestionsCountForTopic @Inject constructor(
+class GetQuestionsCountForTopic(
     private val questionRepository: QuestionRepository
 ) {
-    suspend operator fun invoke(topicId: Int): Int {
+    operator fun invoke(topicId: Int): Flow<Int> {
         return questionRepository.getQuestionsCountForTopic(topicId)
     }
 }

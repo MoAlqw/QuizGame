@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <FrameLayout
+            android:id="@+id/frame_image_of_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/bg_rounded_frame">
+
+            <ImageView
+                android:id="@+id/image_of_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/protocols"
+                android:contentDescription="@string/image_of_topic"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_view_name_of_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="OSI"
+            app:layout_constraintTop_toTopOf="@id/frame_image_of_topic"
+            app:layout_constraintStart_toEndOf="@id/frame_image_of_topic"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/text_view_count_questions_of_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            tools:text="30 Questions"
+            app:layout_constraintStart_toStartOf="@id/text_view_name_of_topic"
+            app:layout_constraintTop_toBottomOf="@id/text_view_name_of_topic" />
+
+        <FrameLayout
+            android:id="@+id/frame_of_count_questions"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circle_light_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <TextView
+                android:id="@+id/text_view_counter_of_questions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="@string/_30_30"
+                android:textSize="12sp" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
