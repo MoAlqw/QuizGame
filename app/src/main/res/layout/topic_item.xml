@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
-                android:text="@string/_30_30"
+                android:text="@string/_15_15"
                 android:textSize="12sp" />
 
         </FrameLayout>
