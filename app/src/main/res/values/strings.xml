@@ -9,4 +9,16 @@
     <string name="next">Далее</string>
     <string name="congratulations">Поздравляем\nхорошая работа!</string>
     <string name="back_to_home">На главную страницу</string>
+    <string name="search_topic">Поиск темы</string>
+    <string name="reset">Сбросить</string>
+    <string name="filter">Фильтры</string>
+    <string name="auth_text">Авторизация</string>
+    <string name="registration_text">Регистрация</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="auth">Авторизоваться</string>
+    <string name="registration">Зарегистрироваться</string>
+    <string name="go_to_registration">К регистрации</string>
+    <string name="go_to_auth">К авторизации</string>
+    <string name="image_of_user_profile">Image of user profile</string>
 </resources>

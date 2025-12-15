@@ -7,14 +7,34 @@
     tools:context=".screens.fragment.TopicsFragment"
     android:padding="15dp">
 
+    <ImageView
+        android:id="@+id/image_of_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user"
+        android:contentDescription="@string/image_of_user_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_view_name_of_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="A A"
+        android:textColor="@color/black"
+        android:layout_marginStart="6dp"
+        app:layout_constraintStart_toEndOf="@id/image_of_profile"
+        app:layout_constraintTop_toTopOf="@id/image_of_profile"
+        app:layout_constraintBottom_toBottomOf="@id/image_of_profile"/>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_of_app"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         app:cardCornerRadius="16dp"
-        app:cardUseCompatPadding="false"
         app:cardPreventCornerOverlap="true"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_name_of_user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2">
@@ -64,11 +84,49 @@
                 android:layout_marginTop="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_view_main_phrase"
-                app:layout_constraintWidth_percent="0.7"/>
+                app:layout_constraintWidth_percent="0.7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_topic"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="15dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_of_app"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/filter"
+        app:iconGravity="textStart"
+        android:backgroundTint="@color/dark_blue"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/filter"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_topics"
@@ -76,12 +134,12 @@
         android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
-        android:layout_marginTop="30dp"
         android:clipToPadding="false"
         android:paddingBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_of_app"
-        tools:listitem="@layout/topic_item" />
+        app:layout_constraintTop_toBottomOf="@id/buttonFilter"
+        tools:listitem="@layout/topic_item"
+        tools:itemCount="4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

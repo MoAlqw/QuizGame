@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Computer network simulator</string>
+    <string name="main_phrase">Test your knowledge with quizzes!</string>
+    <string name="background_image">Background image</string>
+    <string name="description_of_app">If you\'re just looking for a fun way to learn new facts, our quizzes are designed to entertain and educate..</string>
+    <string name="image_of_topic">Image of topic</string>
+    <string name="_15_15">15/15</string>
+    <string name="_15_questions">15 questions</string>
+    <string name="next">Next</string>
+    <string name="congratulations">Congratulations\ngood work!</string>
+    <string name="back_to_home">To the main page</string>
+    <string name="search_topic">Search for a topic</string>
+    <string name="reset">Reset</string>
+    <string name="filter">Filters</string>
+    <string name="auth_text">Authorization</string>
+    <string name="registration_text">Registration</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="auth">Log in</string>
+    <string name="registration">Sign up</string>
+    <string name="go_to_registration">To registration</string>
+    <string name="go_to_auth">To authorization</string>
+    <string name="image_of_user_profile">Image of user profile</string>
+</resources>
